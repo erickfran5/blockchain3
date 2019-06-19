@@ -23,20 +23,23 @@ h3 {
 }
 
 .participant {
+	  position: relative;
+    left: 50%;
+    transform: translateX(-100%);
     border-style: inset;
-    background-color: white;
+	  background-color: white;
     display: inline-block;
     /* width: 300px; */
     height: 200px;
     border-radius: 25px;
     border: 2px solid #0c2438;    
     padding: 20px; 
+	 
 }
 
 .participantButton {
     /* background-color: #008CBA; */
     background-color: #0c2438;
-
     border: none;
     color: white;
     padding: 15px 32px;
@@ -46,4 +49,5 @@ h3 {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+	  
 }
