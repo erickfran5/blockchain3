@@ -9,27 +9,27 @@
         <div class="modal-body">
 
             <div class="form-group text-left">
-              <label for="energyID">energyID</label>
+              <label for="energyID">ID Energia</label>
                 <input formControlName="energyID" type="text" class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="units">units</label>
+              <label for="units">unidades</label>
                 <input formControlName="units" type="text" class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="value">value</label>
+              <label for="value">valor</label>
                 <input formControlName="value" type="number" step='any' class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="ownerID">ownerID</label>
+              <label for="ownerID">ID Propietario</label>
                 <input formControlName="ownerID" type="text" class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="ownerEntity">ownerEntity</label>
+              <label for="ownerEntity">Entidad propietaria</label>
                   <textarea formControlName="ownerEntity" class="form-control" rows="3"></textarea>
             </div>
           
@@ -56,27 +56,27 @@
         <div class="modal-body">
 
             <div class="form-group text-left">
-              <label for="energyID">energyID</label>
+              <label for="energyID">ID Energia</label>
                 <input [ngModel]="energyID"formControlName="energyID" type="text" class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="units">units</label>
+              <label for="units">unidades</label>
                 <input [ngModel]="units"formControlName="units" type="text" class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="value">value</label>
+              <label for="value">valor</label>
                 <input [ngModel]="value" formControlName="value" type="number" step='any' class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="ownerID">ownerID</label>
+              <label for="ownerID">ID Propietario</label>
                 <input [ngModel]="ownerID"formControlName="ownerID" type="text" class="form-control">            
             </div>
           
             <div class="form-group text-left">
-              <label for="ownerEntity">ownerEntity</label>
+              <label for="ownerEntity">Entidad propietaria</label>
                   <textarea [ngModel]="ownerEntity" formControlName="ownerEntity" class="form-control" rows="3"></textarea>            
             </div>
           
@@ -100,7 +100,7 @@
       </div>
       <form [formGroup]="myForm" (ngSubmit)="deleteAsset()">
         <div class="modal-body">
-          Are you sure you want to delete this asset?
+          Estás seguro de que quieres eliminar este activo?
         </div>
         <div class="modal-footer">
           <button (click)="deleteAsset()" type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
@@ -116,7 +116,7 @@
 	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
 		<strong>Error:</strong> {{errorMessage}}
 	</div>
-  <h1 id='assetName'>Energy Assets</h1>
+  <h1 id='assetName'>Energia</h1>
   <div class="row">  
   </div>
   <br>
@@ -126,15 +126,15 @@
         <thead class="thead">
           <tr class="thead-cols">
             
-                <th class="bc">Energy ID</th>
+                <th class="bc">ID Energia</th>
 
-                <th class="bc">Owner ID</th>
+                <th class="bc">ID Propietario</th>
             
-                <th class="bc">Owner Entity</th>
+                <th class="bc">Entidad propietaria</th>
             
-                <th class="bc">Units</th>
+                <th class="bc">Unidades</th>
             
-                <th class="bc">Value</th>
+                <th class="bc">Valor</th>
 
           </tr>
         </thead>
@@ -157,3 +157,15 @@
     </div>
   </div>
 </div>
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
