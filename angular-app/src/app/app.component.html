@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse navbar2">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand navfont" href="#">Decentralized Energy</a>
+      <a class="navbar-brand navfont" href="#">Energia Descentralizada</a>
       
     </div>
     <ul class="nav navbar-nav navbar-right">
@@ -11,47 +11,47 @@
               <span class="caret navfont"></span></a>
             <ul class="dropdown-menu">
               
-              <li><a [routerLink]="['/About']">About</a></li>
+              <li><a [routerLink]="['/About']">Acerca de</a></li>
               <li><a [routerLink]="['/AllTransactions']">Blockchain</a></li>              
             </ul>
           </li>
 
       <li class="dropdown">
-        <a class="dropdown-toggle navfont" data-toggle="dropdown" href="#">Participants
+        <a class="dropdown-toggle navfont" data-toggle="dropdown" href="#">Participantes
           <span class="caret navfont"></span></a>
         <ul class="dropdown-menu">
           
-          <li><a [routerLink]="['/Resident']">Residents</a></li>
-          <li><a [routerLink]="['/Bank']">Banks</a></li>
-          <li><a [routerLink]="['/UtilityCompany']">Utility Companies</a></li>
+          <li><a [routerLink]="['/Resident']">Usuarios</a></li>
+          <!--<li><a [routerLink]="['/Bank']">Banks</a></li>-->
+          <li><a [routerLink]="['/UtilityCompany']">Compañia distribuidora</a></li>
  
         </ul>
       </li>
 
 
       <li class="dropdown">
-        <a class="dropdown-toggle navfont" data-toggle="dropdown" href="#">Transactions
+        <a class="dropdown-toggle navfont" data-toggle="dropdown" href="#">Transaccion
           <span class="caret"></span></a>
         <ul class="dropdown-menu">
           
-          <li><a [routerLink]="['/TransactionRR']">Resident to Resident</a></li>
-          <li><a [routerLink]="['/TransactionRU']">Resident to Utility Company</a></li>
-          <li><a [routerLink]="['/TransactionRB']">Resident to Bank</a></li>
+          <li><a [routerLink]="['/TransactionRR']">Usuario  usuario</a></li>
+          <li><a [routerLink]="['/TransactionRU']">Usuario  Distribuidora </a></li>
+          <!--<li><a [routerLink]="['/TransactionRB']">Resident to Bank</a></li>-->
  
         </ul>
       </li>
 
 
       <li class="dropdown">
-        <a class="dropdown-toggle navfont" data-toggle="dropdown" href="#">Assets
+        <a class="dropdown-toggle navfont" data-toggle="dropdown" href="#">Bienes
           <span class="caret"></span></a>
         <ul class="dropdown-menu">
           
-          <li><a [routerLink]="['/Coins']">Coins</a></li>
+          <li><a [routerLink]="['/Coins']">Moneda</a></li>
           
-          <li><a [routerLink]="['/Energy']">Energy</a></li>
+          <li><a [routerLink]="['/Energy']">Energia</a></li>
 
-          <li><a [routerLink]="['/Cash']">Cash</a></li>
+          <!--<li><a [routerLink]="['/Cash']">Cash</a></li>-->
           
         </ul>
       </li>
@@ -65,5 +65,4 @@
 <div class = "bodybackground">
   <router-outlet></router-outlet>
 </div>
-
 
