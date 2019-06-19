@@ -3,35 +3,35 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addAssetModalLabel">Add Asset</h4>
+        <h4 class="modal-title" id="addAssetModalLabel">Agregar moneda</h4>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
 
             <div class="form-group text-left">
-              <label for="coinsID">coinsID</label>
+              <label for="coinsID">MonedaID</label>
                 <input formControlName="coinsID" type="text" class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="value">value</label>
+              <label for="value">valor</label>
                 <input formControlName="value" type="number" step='any' class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="ownerID">ownerID</label>
+              <label for="ownerID">propietarioID</label>
                 <input formControlName="ownerID" type="text" class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="ownerEntity">ownerEntity</label>
+              <label for="ownerEntity">propietario</label>
                   <textarea formControlName="ownerEntity" class="form-control" rows="3"></textarea>
             </div> 
                          
         </div>
         <div class="modal-footer">
-          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Agregar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
       </form>
     </div>
@@ -44,34 +44,34 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="updateAssetModalLabel">Update Asset</h4>
+        <h4 class="modal-title" id="updateAssetModalLabel">Actualizar</h4>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
 
             <div class="form-group text-left">
-              <label for="coinsID">coinsID</label>
+              <label for="coinsID">MonedaID</label>
                 <input [ngModel]="coinsID"formControlName="coinsID" type="text" class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="value">value</label>
+              <label for="value">valor</label>
                 <input [ngModel]="value" formControlName="value" type="number" step='any' class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="ownerID">ownerID</label>
+              <label for="ownerID">PropietarioID</label>
                 <input [ngModel]="ownerID"formControlName="ownerID" type="text" class="form-control">              
             </div>
           
             <div class="form-group text-left">
-              <label for="ownerEntity">ownerEntity</label>
+              <label for="ownerEntity">Propietario</label>
                   <textarea [ngModel]="ownerEntity" formControlName="ownerEntity" class="form-control" rows="3"></textarea>              
             </div>       
         </div>
         <div class="modal-footer">
-          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Agregar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
       </form>
     </div>
@@ -84,14 +84,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="deleteAssetModalLabel">Delete Asset</h4>
+        <h4 class="modal-title" id="deleteAssetModalLabel">Borrar bien</h4>
       </div>
       <form [formGroup]="myForm" (ngSubmit)="deleteAsset()">
         <div class="modal-body">
-          Are you sure you want to delete this asset?
+          Seguro que quieres eliminarlo?
         </div>
         <div class="modal-footer">
-          <button (click)="deleteAsset()" type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
+          <button (click)="deleteAsset()" type="submit" class="btn btn-danger" data-dismiss="modal">Si</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
         </div>
       </form>
@@ -104,7 +104,7 @@
 	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
 		<strong>Error:</strong> {{errorMessage}}
 	</div>
-  <h1 id='assetName'>Coins Assets</h1>
+  <h1 id='assetName'>Monedas</h1>
   <div class="row">    
   </div>
   <br>
@@ -114,13 +114,13 @@
         <thead class="thead">
           <tr class="thead-cols">
             
-                <th class="bc">Coins ID</th>                            
+                <th class="bc">Moneda ID</th>                            
             
-                <th class="bc">Owner ID</th>
+                <th class="bc">Propietario ID</th>
             
-                <th class="bc">Owner Entity</th>
+                <th class="bc">Propietario</th>
 
-                <th class="bc">Value</th>
+                <th class="bc">Valor</th>
           </tr>
         </thead>
         <tbody>
