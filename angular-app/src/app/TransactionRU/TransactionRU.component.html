@@ -7,7 +7,7 @@
 	</div>
 
   <div class="row">
-      <h1>Resident to Utility </h1>  
+      <h1>Transaccion residente a distribuidora </h1>  
   </div>
 
   <div class="row">
@@ -17,33 +17,33 @@
   <div class="row RR">
     <div *ngIf="transactionFrom" class="col-md-offset-3 col-md-6">
       <div class="panel panel-default">
-        <div class="panel-heading"><strong>Enter Transaction Info</strong></div>
+        <div class="panel-heading"><strong>Ingrese la información de la transacción</strong></div>
         <div class="panel-body">        
           <form [formGroup]="myForm">
 
-            <p ><strong>Rate: {{utilityCoinsPerEnergy}}  Coins / kwH </strong></p>
+            <p ><strong>Tarifa: {{utilityCoinsPerEnergy}}  Precio / kwH </strong></p>
 
-            <p>Action: 
+            <p>Acción: 
               <select name="actions" formControlName="action">
-                <option value="buyEnergy">Buy Energy (kwh) from Utility Company</option>
-                <option value="sellEnergy">Sell Energy (kwh) to Utility Company</option>
+                <option value="buyEnergy">Comprar energía (kwh) a la distribuidora</option>
+                <option value="sellEnergy">Vender energía (kwh) a la distribuidora</option>
               </select>
             </p>
             
-            <p>Resident: 
+            <p>Residente: 
               <select name="residents" formControlName="formResidentID">
                 <option *ngFor="let resident of allResidents" value="{{resident.residentID}}">{{resident.residentID}}</option>
               </select>
             </p>           
               
 
-            <p>Utility Company:
+            <p>Distribuidora:
               <select name="utilityCompanys" formControlName="formUtilityID" >
                 <option *ngFor="let utilityCompany of allUtilityCompanys" value="{{utilityCompany.utilityID}}">{{utilityCompany.utilityID}}</option>
               </select>
             </p>
 
-            <p>Energy value (kwh):
+            <p>Valor de la energia (kwh):
               <input formControlName="value" type="number" step='any' class="form-control inlineInput">
             </p>
 
@@ -58,7 +58,7 @@
       <div class="panel panel-default">
         <div class="panel-heading"><strong>Transaction Executed</strong></div>
         <div class="panel-body">
-        <p>Time Interval: 1:00 pm - 2:00 pm</p>
+        <!--<p>Time Interval: 1:00 pm - 2:00 pm</p>-->
           <form [formGroup]="myForm">
             <p>Transaction ID: {{transactionID}}</p>            
           </form>
