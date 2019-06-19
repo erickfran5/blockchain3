@@ -1,13 +1,14 @@
 
 
-<div class="container">
+<div class="container">	
 
   <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
 		<strong>Error:</strong> {{errorMessage}}
 	</div>
-
+	
+	
   <div class="row">
-      <h2> Resident to Resident Transaction </h2>
+      <h2> Transacción de Usuario a Usuario </h2>
   </div>
 
   <div class="row">
@@ -17,30 +18,30 @@
   <div class="row RR">
     <div *ngIf="transactionFrom" class="col-md-offset-3 col-md-6">
       <div class="panel panel-default">
-        <div class="panel-heading"><strong>Enter Transaction Info</strong></div>
+        <div class="panel-heading"><strong>Ingrese la información de la transacción</strong></div>
         <div class="panel-body">
-        <p>Billing Period: 2:00 pm - 4:00 pm</p>
+        <!--<p>Billing Period: 2:00 pm - 4:00 pm</p>-->
           <form [formGroup]="myForm">
             
-            <p>Producer:           
+            <p>Productor:           
               <select name="residents" formControlName="producerResidentID" >
                 <option *ngFor="let resident of allResidents" value="{{resident.residentID}}">{{resident.residentID}}</option>
               </select>
               </p> 
               
 
-              <p>Consumer: 
+              <p>Consumidor: 
               <select name="residents" formControlName="consumerResidentID" >
                 <option *ngFor="let resident of allResidents" value="{{resident.residentID}}">{{resident.residentID}}</option>
               </select>
               </p>
               
 
-            <p>Energy exchanged (kwh): <input formControlName="energyValue" type="number" step='any' class="form-control inlineInput">
+            <p>Energía intercambiada (kwh): <input formControlName="energyValue" type="number" step='any' class="form-control inlineInput">
               </p>
             
-            <p>Rate: <strong>{{residentCoinsPerEnergy}} Coins / kwh </strong>
-            </p>
+            <!--<p>Tarifa: {{residentCoinsPerEnergy}} Precio / kwh 
+            </p>-->
             <br>
             </form>
         </div>
@@ -49,9 +50,9 @@
 
     <div *ngIf="!transactionFrom" class="col-md-offset-3 col-md-6">
       <div class="panel panel-default">
-        <div class="panel-heading"><strong>Transaction Executed</strong></div>
+        <div class="panel-heading"><strong>Transacción ejecutada</strong></div>
         <div class="panel-body">
-        <p>Billing Period: 2:00 pm - 4:00 pm</p>
+        <!--<p>Billing Period: 2:00 pm - 4:00 pm</p>-->
           <form [formGroup]="myForm">
             <p>Transaction ID: {{transactionID}}</p>
             <br>
@@ -74,7 +75,7 @@
 
   <div class="row">  
     <div *ngIf="transactionFrom" class="col-md-offset-4 col-md-4">
-      <button (click)="execute(form);" type="button" class="btn btn-success" data-toggle="modal" >Execute Transaction</button>	  
+      <button (click)="execute(form);" type="button" class="btn btn-success" data-toggle="modal" >Ejecutar Transacción</button>	  
     </div>
   </div>
 
@@ -82,6 +83,39 @@
     <br>
     <br>
   </div>
+	
+		<div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-responsive table-hover">
+        <thead class="thead">
+          <tr class="thead-cols">
+            
+                           
+                <th class="bc">Nombre </th>
+            
+                <th class="bc">Generacion</th>  
+               
+						    <th class="bc">Precio de energia</th>
+						
+						
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let resident of allResidents">
+                      
+            
+                <td>{{resident.firstName}}</td>            
+                <td>{{resident.lastName}}</td>               
+						    <td>{{resident.cashValue}}</td>
+                           
+          
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>	
+   
 
-
+	
+	
 </div>
